@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+	<!-- Enable annotations for schedule -->
+	<task:annotation-driven />
+
+	<!-- Define Class and Method for schedule -->
+	<!-- 
+	<bean id="checkUpdate" class="com.enjaz.webautofill.service.CheckUpdates">
+		<property name="upgradeURL" value="https://s3-eu-west-1.amazonaws.com/ebn/vfs/autofillUpdate/" />
+	</bean>
+-->
+<!-- 
+	 <task:scheduled-tasks>-->
+		<!-- <task:scheduled ref="checkUpdate" method="invokeAntBuild" cron="*/5 * * * * ?" />-->
+		<!-- <task:scheduled ref="checkUpdate" method="invokeAntBuild" cron="0 0/30 * 1/1 * ?" />
+	</task:scheduled-tasks>-->
+	 
+	<!-- /Define Class and Method for schedule -->
+	
+</beans>

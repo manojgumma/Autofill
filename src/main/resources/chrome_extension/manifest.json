@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "AutoFill:Proceed to Payment",
+  "version": "1",
+  "description": "Manipulate the DOM when the page is done loading",
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"	
+  },
+
+   "background": {
+    "scripts": ["eventPage.js"]	
+  },
+  "content_scripts": [ {
+    "js": [ "jquery.min.js", "background.js" ],
+"matches": ["https://spinebiz.net/login/","https://services.ksavisa.sa/Login","https://services.ksavisa.sa/VisaCompany","https://services.ksavisa.sa/HealthInsurance*","https://services.ksavisa.sa/HealthInsuranceCompaniesList*","https://services.ksavisa.sa/SmartForm/HealthInsurance*","https://services.ksavisa.sa/SmartForm/HealthInsuranceInfo*","https://services.ksavisa.sa/SmartForm", "https://services.ksavisa.sa/Payment/GetApp*","https://services.ksavisa.sa/"],
+"run_at": "document_end"
+  }],
+  "permissions":[
+ "activeTab", "contextMenus","pageCapture",
+    "tabs"
+  ]
+}
+
